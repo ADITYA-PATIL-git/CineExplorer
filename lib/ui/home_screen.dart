@@ -13,10 +13,13 @@ class HomeScreen extends StatelessWidget {
     context.read<HomeScreenBloc>().add(LoadMoviesEvent());
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
+        leading: const Icon(
+          Icons.menu,
+          size: 28,
+        ),
         actions: [
           Container(
-            height: 38,
+            height: 36,
             decoration: const BoxDecoration(shape: BoxShape.circle),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(200),
