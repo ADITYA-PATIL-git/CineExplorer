@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
         leading: const Icon(Icons.menu),
         actions: [
           Container(
-            height: 30,
+            height: 36,
             decoration: const BoxDecoration(shape: BoxShape.circle),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(200),
@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
           'Cine-Explorer',
           style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 30,
+              fontSize: 34,
               fontFamily: 'BebasNeueBold'),
         ),
         centerTitle: true,
