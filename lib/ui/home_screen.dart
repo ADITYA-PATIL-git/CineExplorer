@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
         leading: const Icon(Icons.menu),
         actions: [
           Container(
-            height: 36,
+            height: 38,
             decoration: const BoxDecoration(shape: BoxShape.circle),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(200),
