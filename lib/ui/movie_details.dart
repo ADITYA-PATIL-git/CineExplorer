@@ -34,7 +34,7 @@ class MovieDetails extends StatelessWidget {
                                 fontFamily: 'BebasNeueBold')),
                       ),
                       const SizedBox(
-                        height: 30,
+                        height: 26,
                       ),
                       Row(
                         children: [
