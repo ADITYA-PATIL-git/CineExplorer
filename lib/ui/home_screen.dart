@@ -13,6 +13,7 @@ class HomeScreen extends StatelessWidget {
     context.read<HomeScreenBloc>().add(LoadMoviesEvent());
     return Scaffold(
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         leading: const Icon(
           Icons.menu,
           size: 28,
@@ -41,7 +42,7 @@ class HomeScreen extends StatelessWidget {
         ),
         centerTitle: true,
         elevation: 0,
-        toolbarHeight: 80,
+        toolbarHeight: 76,
       ),
       body: BlocBuilder<HomeScreenBloc, HomeScreenState>(
         builder: (context, state) {
@@ -63,9 +64,9 @@ class HomeScreen extends StatelessWidget {
                           Text(
                             'Top 10',
                             style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'MontserratRegular'),
                           ),
                         ],
                       ),
@@ -81,8 +82,9 @@ class HomeScreen extends StatelessWidget {
                                 crossAxisCount: 2, mainAxisExtent: 276),
                         itemBuilder: (context, index) {
                           final Movie movie = state.movies[index];
-                          return GestureDetector(
+                          return InkWell(
                             onTap: () => _navigateToTaskDetails(context, movie),
+                            splashColor: Colors.grey.withOpacity(1),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Container(

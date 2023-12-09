@@ -34,23 +34,79 @@ class MovieDetails extends StatelessWidget {
                                   height: 0.92,
                                   fontFamily: 'BebasNeueBold')),
                         ),
-                        Text(
-                          movie.releaseDate,
-                          style: const TextStyle(
-                              color: Colors.white, fontSize: 16),
-                        ),
                         const SizedBox(
                           height: 30,
+                        ),
+                        Row(
+                          children: [
+                            const Text(
+                              'Rating :',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  fontFamily: 'MontserratRegular'),
+                            ),
+                            const SizedBox(
+                              width: 6,
+                            ),
+                            Text(
+                              movie.rating.toStringAsFixed(1),
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontFamily: 'MontserratRegular'),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            const Text(
+                              'Release date :',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  fontFamily: 'MontserratRegular'),
+                            ),
+                            const SizedBox(
+                              width: 6,
+                            ),
+                            Text(
+                              movie.releaseDate,
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontFamily: 'MontserratRegular'),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Text(
+                          'Overview :',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              fontFamily: 'MontserratRegular'),
+                        ),
+                        const SizedBox(
+                          height: 10,
                         ),
                         RichText(
                           textAlign: TextAlign.start,
                           text: TextSpan(
                               text: movie.overview,
                               style: const TextStyle(
-                                fontSize: 18.0,
-                                wordSpacing: 2,
-                                height: 0.92,
-                              )),
+                                  fontSize: 18.0,
+                                  wordSpacing: 2,
+                                  height: 0.92,
+                                  fontFamily: 'MontserratRegular')),
                         ),
                       ],
                     ),
@@ -59,14 +115,17 @@ class MovieDetails extends StatelessWidget {
               ],
             ),
             Positioned(
-              top: 30,
-              left: 10,
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: const Icon(Icons.arrow_back_ios_rounded),
-                color: Colors.white,
+              top: 44,
+              left: 14,
+              child: CircleAvatar(
+                backgroundColor: Colors.black,
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.arrow_back_ios_rounded),
+                  color: Colors.white,
+                ),
               ),
             ),
           ],

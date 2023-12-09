@@ -4,6 +4,7 @@ class Movie {
   String posterPath;
   String backDropPath;
   String releaseDate;
+  double rating;
 
   Movie({
     required this.title,
@@ -11,6 +12,7 @@ class Movie {
     required this.posterPath,
     required this.backDropPath,
     required this.releaseDate,
+    required this.rating,
   });
 
   factory Movie.fromJson(Map<String, dynamic> json) {
@@ -20,6 +22,7 @@ class Movie {
       posterPath: json["poster_path"],
       backDropPath: json["backdrop_path"],
       releaseDate: json["release_date"],
+      rating: json["vote_average"],
     );
   }
 
